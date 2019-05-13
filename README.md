@@ -11,7 +11,10 @@ The PostgreSQL people seem to think [very differently about query tuning](https:
 2. In the positive sense, most places I've worked people just slap NOLOCK everywhere, so PostgreSQL is nicer in that it doesn't let engineers pollute the actual SQL with tall fescue shading the core business logic; most Microsoft engineers I've met don't know they can simply SET TRANSACTION ISOLATION LEVEL READ UNCOMMITTED for the same effect.
 
 # MySQL
-Here is a link to MySQL's Optimization documentation, including specific links for [8.11.2 Table Locking Issues](https://dev.mysql.com/doc/refman/8.0/en/table-locking.html) and [8.9 Controlling the Query Optimizer](https://dev.mysql.com/doc/refman/8.0/en/controlling-optimizer.html). MySQL seems fairly similar to SQL Server, especially [8.9.4 Index Hints](https://dev.mysql.com/doc/refman/8.0/en/index-hints.html):
+Here is a link to MySQL's Optimization documentation, including specific links for:
+1. [8.11.2 Table Locking Issues](https://dev.mysql.com/doc/refman/8.0/en/table-locking.html)
+2. [8.9 Controlling the Query Optimizer](https://dev.mysql.com/doc/refman/8.0/en/controlling-optimizer.html).
+3. MySQL seems fairly similar to SQL Server, especially [8.9.4 Index Hints](https://dev.mysql.com/doc/refman/8.0/en/index-hints.html):
 
 > ```
 > tbl_name [[AS] alias] [index_hint_list]
@@ -134,6 +137,6 @@ lol @ this, too:
 > 
 > There are other tweaks that can be used to dissuade the DB2 optimizer from choosing a specific index, such as multiplying or dividing by 1, adding or subtracting 0, or appending an empty string to a character column. 
 
-[Influencing the DB2 Optimizer: Part 4 - OPTIMIZE FOR n ROWS](https://db2portal.blogspot.com/2015/07/influencing-db2-optimizer-part-4.html)
-[Influencing the DB2 Optimizer: Part 5 - Changing DB2 Catalog Statistics](https://db2portal.blogspot.com/2015/08/influencing-db2-optimizer-part-5.html)
-[Influencing the DB2 Optimizer: Part 6 - Using Optimization Hints](https://db2portal.blogspot.com/2015/08/influencing-db2-optimizer-part-6-using.html)
+1. [Influencing the DB2 Optimizer: Part 4 - OPTIMIZE FOR n ROWS](https://db2portal.blogspot.com/2015/07/influencing-db2-optimizer-part-4.html)
+2. [Influencing the DB2 Optimizer: Part 5 - Changing DB2 Catalog Statistics](https://db2portal.blogspot.com/2015/08/influencing-db2-optimizer-part-5.html)
+3. [Influencing the DB2 Optimizer: Part 6 - Using Optimization Hints](https://db2portal.blogspot.com/2015/08/influencing-db2-optimizer-part-6-using.html)
